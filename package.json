@@ -1,5 +1,15 @@
 {
-	"devDependencies": {
-		"typescript": "^4.9.5"
-	}
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@types/node": "*",
+    "nodemon": "^2.0.20",
+    "qrcode-terminal": "^0.12.0",
+    "ts-node": "^10.9.1",
+    "whatsapp-web.js": "^1.19.4"
+  },
+  "scripts": {
+    "dev": "nodemon --watch 'index.ts' --exec 'ts-node index.ts' -e ts"
+  }
 }
