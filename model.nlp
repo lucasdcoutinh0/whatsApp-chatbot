@@ -1,0 +1,543 @@
+{
+  "settings": {
+    "languages": [
+      "en"
+    ],
+    "tag": "nlp",
+    "threshold": 0.5,
+    "autoLoad": true,
+    "autoSave": true,
+    "modelFileName": "model.nlp",
+    "executeActionsBeforeAnswers": false,
+    "calculateSentiment": true
+  },
+  "nluManager": {
+    "settings": {
+      "tag": "nlu-manager"
+    },
+    "locales": [
+      "en"
+    ],
+    "languageNames": {},
+    "domainManagers": {
+      "en": {
+        "settings": {
+          "locale": "en",
+          "trainByDomain": false,
+          "tag": "domain-manager-en",
+          "nluByDomain": {
+            "default": {
+              "className": "NeuralNlu",
+              "settings": {}
+            }
+          },
+          "useStemDict": true
+        },
+        "stemDict": {
+          "do,like,pizza,you": {
+            "intent": "question",
+            "domain": "default"
+          },
+          "is,it,time,what": {
+            "intent": "question",
+            "domain": "default"
+          },
+          "are,how,old,you": {
+            "intent": "question",
+            "domain": "default"
+          },
+          "is,parti,when,your": {
+            "intent": "question",
+            "domain": "default"
+          },
+          "a,is,it,parti": {
+            "intent": "question",
+            "domain": "default"
+          },
+          "hi": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hey": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "hello": {
+            "intent": "greetings",
+            "domain": "default"
+          },
+          "light,off,pleas,the,turn": {
+            "intent": "command",
+            "domain": "default"
+          },
+          "am,happi,i,today": {
+            "intent": "emotion",
+            "domain": "default"
+          }
+        },
+        "intentDict": {
+          "question": "default",
+          "greetings": "default",
+          "command": "default",
+          "emotion": "default"
+        },
+        "sentences": [
+          {
+            "domain": "default",
+            "utterance": "Do you like pizza?",
+            "intent": "question"
+          },
+          {
+            "domain": "default",
+            "utterance": "What time is it?",
+            "intent": "question"
+          },
+          {
+            "domain": "default",
+            "utterance": "How old are you?",
+            "intent": "question"
+          },
+          {
+            "domain": "default",
+            "utterance": "When is your party?",
+            "intent": "question"
+          },
+          {
+            "domain": "default",
+            "utterance": "Is it a party?",
+            "intent": "question"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hi",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hey",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Hello",
+            "intent": "greetings"
+          },
+          {
+            "domain": "default",
+            "utterance": "Please turn off the light",
+            "intent": "command"
+          },
+          {
+            "domain": "default",
+            "utterance": "I am happy today",
+            "intent": "emotion"
+          }
+        ],
+        "domains": {
+          "master_domain": {
+            "settings": {
+              "locale": "en",
+              "tag": "nlu-en",
+              "keepStopwords": true,
+              "nonefeatureValue": 1,
+              "nonedeltaMultiplier": 1.2,
+              "spellCheck": false,
+              "spellCheckDistance": 1,
+              "filterZeros": true,
+              "log": true
+            },
+            "features": {
+              "do": 1,
+              "you": 1,
+              "like": 1,
+              "pizza": 1,
+              "what": 1,
+              "time": 1,
+              "is": 1,
+              "it": 1,
+              "how": 1,
+              "old": 1,
+              "are": 1,
+              "when": 1,
+              "your": 1,
+              "parti": 1,
+              "a": 1,
+              "hi": 1,
+              "hey": 1,
+              "hello": 1,
+              "pleas": 1,
+              "turn": 1,
+              "off": 1,
+              "the": 1,
+              "light": 1,
+              "i": 1,
+              "am": 1,
+              "happi": 1,
+              "today": 1
+            },
+            "intents": {
+              "question": 1,
+              "greetings": 1,
+              "command": 1,
+              "emotion": 1
+            },
+            "intentFeatures": {
+              "question": {
+                "do": 1,
+                "you": 1,
+                "like": 1,
+                "pizza": 1,
+                "what": 1,
+                "time": 1,
+                "is": 1,
+                "it": 1,
+                "how": 1,
+                "old": 1,
+                "are": 1,
+                "when": 1,
+                "your": 1,
+                "parti": 1,
+                "a": 1
+              },
+              "greetings": {
+                "hi": 1,
+                "hey": 1,
+                "hello": 1
+              },
+              "command": {
+                "pleas": 1,
+                "turn": 1,
+                "off": 1,
+                "the": 1,
+                "light": 1
+              },
+              "emotion": {
+                "i": 1,
+                "am": 1,
+                "happi": 1,
+                "today": 1
+              }
+            },
+            "featuresToIntent": {
+              "do": [
+                "question"
+              ],
+              "you": [
+                "question"
+              ],
+              "like": [
+                "question"
+              ],
+              "pizza": [
+                "question"
+              ],
+              "what": [
+                "question"
+              ],
+              "time": [
+                "question"
+              ],
+              "is": [
+                "question"
+              ],
+              "it": [
+                "question"
+              ],
+              "how": [
+                "question"
+              ],
+              "old": [
+                "question"
+              ],
+              "are": [
+                "question"
+              ],
+              "when": [
+                "question"
+              ],
+              "your": [
+                "question"
+              ],
+              "parti": [
+                "question"
+              ],
+              "a": [
+                "question"
+              ],
+              "hi": [
+                "greetings"
+              ],
+              "hey": [
+                "greetings"
+              ],
+              "hello": [
+                "greetings"
+              ],
+              "pleas": [
+                "command"
+              ],
+              "turn": [
+                "command"
+              ],
+              "off": [
+                "command"
+              ],
+              "the": [
+                "command"
+              ],
+              "light": [
+                "command"
+              ],
+              "i": [
+                "emotion"
+              ],
+              "am": [
+                "emotion"
+              ],
+              "happi": [
+                "emotion"
+              ],
+              "today": [
+                "emotion"
+              ]
+            },
+            "neuralNetwork": {
+              "settings": {
+                "locale": "en",
+                "tag": "nlu-en",
+                "keepStopwords": true,
+                "nonefeatureValue": 1,
+                "nonedeltaMultiplier": 1.2,
+                "spellCheck": false,
+                "spellCheckDistance": 1,
+                "filterZeros": true,
+                "log": true
+              },
+              "features": [
+                "do",
+                "you",
+                "like",
+                "pizza",
+                "what",
+                "time",
+                "is",
+                "it",
+                "how",
+                "old",
+                "are",
+                "when",
+                "your",
+                "parti",
+                "a",
+                "hi",
+                "hey",
+                "hello",
+                "pleas",
+                "turn",
+                "off",
+                "the",
+                "light",
+                "i",
+                "am",
+                "happi",
+                "today"
+              ],
+              "intents": [
+                "question",
+                "greetings",
+                "command",
+                "emotion"
+              ],
+              "perceptrons": [
+                [
+                  2.495706796646118,
+                  4.991171836853027,
+                  2.495706796646118,
+                  2.495706796646118,
+                  2.0787193775177,
+                  2.0787193775177,
+                  5.199193477630615,
+                  3.1203742027282715,
+                  2.493722915649414,
+                  2.493722915649414,
+                  2.493722915649414,
+                  2.077361822128296,
+                  2.077361822128296,
+                  3.119208812713623,
+                  1.0405577421188354,
+                  -1.775128960609436,
+                  -1.7549071311950684,
+                  -1.7343684434890747,
+                  -0.5575534701347351,
+                  -0.5575534701347351,
+                  -0.5575534701347351,
+                  -0.5575534701347351,
+                  -0.5575534701347351,
+                  -0.6465145945549011,
+                  -0.6465145945549011,
+                  -0.6465145945549011,
+                  -0.6465145945549011,
+                  1.798408379862449
+                ],
+                [
+                  -1.3349812030792236,
+                  -2.6710305213928223,
+                  -1.3349812030792236,
+                  -1.3349812030792236,
+                  -1.1101360321044922,
+                  -1.1101360321044922,
+                  -2.7843804359436035,
+                  -1.674524188041687,
+                  -1.3275291919708252,
+                  -1.3275291919708252,
+                  -1.3275291919708252,
+                  -1.1026582717895508,
+                  -1.1026582717895508,
+                  -1.668210506439209,
+                  -0.5589645504951477,
+                  7.2520856857299805,
+                  7.343151092529297,
+                  7.256557941436768,
+                  -1.342185139656067,
+                  -1.342185139656067,
+                  -1.342185139656067,
+                  -1.342185139656067,
+                  -1.342185139656067,
+                  -1.6723315715789795,
+                  -1.6723315715789795,
+                  -1.6723315715789795,
+                  -1.6723315715789795,
+                  6.730228134996923
+                ],
+                [
+                  -0.1609727293252945,
+                  -0.329934298992157,
+                  -0.1609727293252945,
+                  -0.1609727293252945,
+                  -0.12184811383485794,
+                  -0.12184811383485794,
+                  -0.3470735549926758,
+                  -0.21628400683403015,
+                  -0.14426955580711365,
+                  -0.14426955580711365,
+                  -0.14426955580711365,
+                  -0.10763407498598099,
+                  -0.10763407498598099,
+                  -0.2004110962152481,
+                  -0.07042581588029861,
+                  -0.3771321475505829,
+                  -0.3725757896900177,
+                  -0.3679509460926056,
+                  2.7822816371917725,
+                  2.7822816371917725,
+                  2.7822816371917725,
+                  2.7822816371917725,
+                  2.7822816371917725,
+                  -0.1865173578262329,
+                  -0.1865173578262329,
+                  -0.1865173578262329,
+                  -0.1865173578262329,
+                  0.37838000435897856
+                ],
+                [
+                  -0.18261221051216125,
+                  -0.37677687406539917,
+                  -0.18261221051216125,
+                  -0.18261221051216125,
+                  -0.15023896098136902,
+                  -0.15023896098136902,
+                  -0.40130332112312317,
+                  -0.2492721825838089,
+                  -0.1634872406721115,
+                  -0.1634872406721115,
+                  -0.1634872406721115,
+                  -0.134656623005867,
+                  -0.134656623005867,
+                  -0.23267041146755219,
+                  -0.0784943476319313,
+                  -0.49502602219581604,
+                  -0.48853200674057007,
+                  -0.48197075724601746,
+                  -0.1664603352546692,
+                  -0.1664603352546692,
+                  -0.1664603352546692,
+                  -0.1664603352546692,
+                  -0.1664603352546692,
+                  3.4452033042907715,
+                  3.4452033042907715,
+                  3.4452033042907715,
+                  3.4452033042907715,
+                  0.4983399849645467
+                ]
+              ]
+            }
+          }
+        }
+      }
+    },
+    "intentDomains": {},
+    "extraSentences": [
+      [
+        "en",
+        "Do you like pizza?"
+      ],
+      [
+        "en",
+        "What time is it?"
+      ],
+      [
+        "en",
+        "How old are you?"
+      ],
+      [
+        "en",
+        "When is your party?"
+      ],
+      [
+        "en",
+        "Is it a party?"
+      ],
+      [
+        "en",
+        "Hi"
+      ],
+      [
+        "en",
+        "Hey"
+      ],
+      [
+        "en",
+        "Hello"
+      ],
+      [
+        "en",
+        "Please turn off the light"
+      ],
+      [
+        "en",
+        "I am happy today"
+      ]
+    ]
+  },
+  "ner": {
+    "settings": {
+      "tag": "ner",
+      "entityPreffix": "%",
+      "entitySuffix": "%"
+    },
+    "rules": {}
+  },
+  "nlgManager": {
+    "settings": {
+      "tag": "nlg-manager"
+    },
+    "responses": {}
+  },
+  "actionManager": {
+    "settings": {
+      "tag": "action-manager"
+    },
+    "actions": {}
+  },
+  "slotManager": {}
+}
