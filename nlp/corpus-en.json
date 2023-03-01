@@ -1,0 +1,50 @@
+{
+    "name": "Greetings, questions, text and image",
+    "locale": "en-US",
+    "data": [{
+        "intent": "question",
+        "utterances": [
+            "Do you like pizza?",
+            "What time is it?",
+            "How old are you?",
+            "When is your party?",
+            "Is it a party?"
+        ]
+    },
+    {
+        "intent": "greeting",
+        "utterances": [
+            "Hello",
+            "Hi",
+            "Hey"
+        ]
+    },
+    {
+        "intent": "text",
+        "utterances": [
+            "Please generate a report",
+            "Generate a post",
+            "Create a standup",
+            "Write an email",
+            "Compose a message",
+            "Draft a memo",
+            "Write a letter",
+            "Create a document",
+            "Type a note"
+        ]
+    },
+    {
+        "intent": "image",
+        "utterances": [
+          "Create a image from christmas",
+          "Generate a picture about happines",
+          "Create a image from my birthday",
+          "Show photography about me",
+          "Take a picture from the sky",
+          "Capture an image about something",
+          "Snap a photo from winter",
+          "Shoot a picture"
+        ]
+    }
+]
+}

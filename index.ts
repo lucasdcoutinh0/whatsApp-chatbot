@@ -29,17 +29,7 @@ client.initialize();
 
 client.on('message', async (msg: Message) => {
     const textType = await recognizeTextType(msg.body);
-    if(textType === 'question') {
-        msg.reply(
-            await getAnswer(msg.body) || "Sorry i dont know the answer for this question."
-        )
-    }
-    else if(textType === 'greetings'){
-        msg.reply('Hi, Im a chatbot that uses ia, make a question and i gonna answer you')
-    }
-    else{
-        msg.reply('Sorry i didnt understand what you say, but no worries im working on that')
-    }
+    console.log(textType);
 })
 
 
