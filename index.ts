@@ -27,7 +27,7 @@ client.on('disconnected', (reason: string) => {
 client.initialize();
 
 client.on('message', async (msg: Message) => {
-    const repply = await requestManager(msg) || 'Sorry, seems like I am not able to answer this question.';
+    const repply = await requestManager(msg) || 'Sorry, seems like I am not able to answer';
     msg.reply(repply);
 })
 

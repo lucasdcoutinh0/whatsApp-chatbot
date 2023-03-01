@@ -18,7 +18,7 @@ export async function requestManager(msg: Message) {
         return `Here is your image ${await getImage(prompt)}}`;
     }
     else if(type === 'greeting'){
-        return console.log("This is a greeting");
+        return`Hey, ${(await msg.getContact()).pushname}, how can i help you ?`;
     }
     else{
         return console.log("This is a other");
