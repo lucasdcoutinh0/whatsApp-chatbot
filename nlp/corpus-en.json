@@ -30,7 +30,9 @@
             "Draft a memo",
             "Write a letter",
             "Create a document",
-            "Type a note"
+            "Type a note",
+            "Write a tweet",
+            "Write a description for a instagram post"
         ]
     },
     {

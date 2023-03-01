@@ -12,7 +12,7 @@ const manager = new NlpManager({ languages: ['en'] });
 export async function recognizeTextType(text: string): Promise<string> {
   const response = await manager.process(text);
   const { classifications } = response;
-  const threshold = 0.7;
+  const threshold = 0.6;
   const topClassification = classifications[0];
   if (topClassification.score >= threshold) {
     return topClassification.intent;

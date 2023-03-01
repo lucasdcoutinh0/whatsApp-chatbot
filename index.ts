@@ -1,8 +1,7 @@
 import { Client, LocalAuth, Message } from 'whatsapp-web.js';
 // @ts-ignore
 import qrcode from "qrcode-terminal";
-import { getAnswer } from './openIA/getAnswer';
-import {recognizeTextType} from './nlp/question-recognition'
+import { requestManager } from './requestManager';
 
 console.log('Application started')
 
@@ -28,8 +27,8 @@ client.on('disconnected', (reason: string) => {
 client.initialize();
 
 client.on('message', async (msg: Message) => {
-    const textType = await recognizeTextType(msg.body);
-    console.log(textType);
+    const repply = await requestManager(msg) || 'Sorry, seems like I am not able to answer this question.';
+    msg.reply(repply);
 })
 
 
