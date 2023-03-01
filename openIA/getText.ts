@@ -1,27 +1,28 @@
-import axios from "axios";
 import dotenv from "dotenv";
+import {Configuration, OpenAIApi } from 'openai';
 
 dotenv.config();
 
-const getText = async (text: string): Promise<string | undefined> => {
+const configuration = new Configuration({
+  apiKey: process.env.OPENAI_API_KEY,
+});
+
+const openai = new OpenAIApi(configuration);
+
+const getText = async (prompt: string): Promise<string | undefined> => {
   try {
-    const response = await axios({
-      method: "POST",
-      url: "https://api.openai.com/v1/engines/davinci-codex/completions",
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `Bearer ${process.env.OPENAI_API_KEY}`,
-      },
-      data: {
-        prompt,
-        max_tokens: 200,
-        n: 0.8,
-        stop: ["\n"],
-      },
+    const response = await openai.createCompletion({
+      model: "text-davinci-003",
+      prompt: prompt,
+      temperature: 1,
+      max_tokens: 200,
+      top_p: 1,
+      frequency_penalty: 0,
+      presence_penalty: 0,
     });
-    return response.data.choices[0].text.trim();
-  } catch (error) {
-    console.error(error);
+    return response.data.choices[0].text;
+  } catch (error: any) {
+    console.error(error.response.data);
     return undefined;
   }
 };
