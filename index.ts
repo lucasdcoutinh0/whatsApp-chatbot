@@ -21,6 +21,10 @@ client.on('ready', () => {
     console.log('Client is ready!');
 });
 
+client.on('disconnected', (reason: string) => {
+    console.log(`Client was disconnected: ${reason}`);
+});
+
 client.initialize();
 
 client.on('message', async (msg: Message) => {
