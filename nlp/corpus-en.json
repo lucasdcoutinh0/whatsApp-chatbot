@@ -47,6 +47,35 @@
           "Snap a photo from winter",
           "Shoot a picture"
         ]
+    },
+    {
+        "intent": "math",
+        "utterances": [
+            "Calculate 2+2",
+            "Solve 2+2",
+            "Sum 2+2",
+            "Divide 2 by 2",
+            "Subtract 2 from 2",
+            "Multiply 2 by 2",
+            "I have 5 apples and 3 oranges. How many fruits do I have?",
+            "If i have 5 fruits and give 3 to my friend, how many fruits do I have left?",
+            "What is 2+2?",
+            "What is the square root of 16?",
+            "What is the value of pi?",
+            "What is the derivative of x^2?",
+            "What is the integral of 3x?",
+            "What is the equation of a line that passes through (2,3) and (-1,4)?",
+            "What is the equation of a circle with center (2,3) and radius 4?",
+            "What is the slope of a line that passes through (3,5) and (-2,-1)?",
+            "What is the area of a triangle with base 6 and height 8?",
+            "What is the volume of a sphere with radius 4?",
+            "What is the equation of a circle with center (2,3) and radius 5?",
+            "What is the sum of the first 10 positive integers?",
+            "What is the product of 4 and 7?",
+            "What is the value of sin(60)?",
+            "What is the value of log base 2 of 16?",
+            "What is the probability of rolling a 6 on a fair die?"
+        ]
     }
 ]
 }
