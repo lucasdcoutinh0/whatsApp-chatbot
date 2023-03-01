@@ -3,7 +3,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
-const apiKey = process.env.OPENAI_API_KEY;
+const apiKey = process.env.WOLFRAM_API_KEY;
 
 export const getMath = async (math: string) => {
     try{

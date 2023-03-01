@@ -8,7 +8,13 @@
             "What time is it?",
             "How old are you?",
             "When is your party?",
-            "Is it a party?"
+            "Is it a party?",
+            "What is the capital of france ?",
+            "When is the independence day of the united states ?",
+            "What is the capital of the united states ?",
+            "How many people live in the united states ?",
+            "What is the capital of brazil ?",
+            "How many people live in brazil ?"
         ]
     },
     {
@@ -60,6 +66,8 @@
             "I have 5 apples and 3 oranges. How many fruits do I have?",
             "If i have 5 fruits and give 3 to my friend, how many fruits do I have left?",
             "What is 2+2?",
+            "How much is 10 + 10?",
+            "What is 2+2+2+2+2?",
             "What is the square root of 16?",
             "What is the value of pi?",
             "What is the derivative of x^2?",
