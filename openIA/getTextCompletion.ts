@@ -32,7 +32,7 @@ const getTextCompletion = async (props: Props) => {
         });
         return response.data.choices[0].text;
     } catch (error: any) {
-      console.error(error.response.data);
+      console.error(error);
       return undefined;
     }
 };
