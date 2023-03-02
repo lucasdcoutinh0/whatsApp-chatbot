@@ -1,7 +1,7 @@
 import { Client, LocalAuth, Message } from 'whatsapp-web.js';
 // @ts-ignore
 import qrcode from "qrcode-terminal";
-import { requestManager } from './requestManager';
+import { checkUserState } from './auth/checkUserState';
 
 console.log('Application started')
 
@@ -16,7 +16,7 @@ client.on('qr', (qr: string) => {
     qrcode.generate(qr, { small: true });
 });
 
-client.on('ready', () => {
+client.on('ready', async () => {
     console.log('Client is ready!');
 });
 
@@ -27,8 +27,7 @@ client.on('disconnected', (reason: string) => {
 client.initialize();
 
 client.on('message', async (msg: Message) => {
-    const repply = await requestManager(msg) || 'Sorry, seems like I am not able to answer';
-    msg.reply(repply);
+    checkUserState({msg, client})
 })
 
 
