@@ -17,6 +17,7 @@ import { requestManager } from "../requestManager";
             await groupChat.leave()
         }
         else if(user.isValid){
+            props.msg.react('👍')
             const response = await requestManager(props.msg)
             await props.client.sendMessage(props.msg.from, response)
         }
